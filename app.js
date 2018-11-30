@@ -17,7 +17,7 @@ class InviteeClass {
 
   generateInviteeHtml(invitee, index) {
     return `
-    <li>${invitee.name}<label>Confirmed<input type="checkbox" ${invitee.isConfirmed ? 'checked' : ''}onChange="invitee.toggleInviteeStatus(${index})"></label><button onClick="invitee.deleteInvitee(event, ${index})">remove</button></li>
+    <li>${invitee.name}<label>Confirmed <input type="checkbox" ${invitee.isConfirmed ? 'checked' : ''}onChange="invitee.toggleInviteeStatus(${index})"></label><button onClick="invitee.deleteInvitee(event, ${index})">remove</button></li>
     `
   }//end generateInviteeHtml
 
