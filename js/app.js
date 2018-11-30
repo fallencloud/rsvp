@@ -1,22 +1,17 @@
+'use strict';
+
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
+const routes = require('./routes');
+
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use('/', routes);
+
 const port = process.env.PORT || 3000;
-
-// /GET /
-app.use('/', (req, res, next) => {
-  res.send('register');
-  next();
-});
-
-// /GET /register
-
-// /POST /register
-
-// /GET /login
-// /POST /login
-
-// /GET /events
 
 app.listen(port, (err) => {
   if (err) {
